@@ -1,13 +1,22 @@
 import express from "express";
-import { addToCart, getCart, removeFromCart, clearCart } from "../controllers/cartController.js";
-import { verifyUser } from "../middleware/authMiddleware.js";
+import { addToCart, getCart, updateCartItem, removeFromCart, clearCart } from "../controllers/cartController.js";
+import { verifyToken } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
 
-// Protect all cart routes (user must be logged in)
-router.post('/add', verifyUser, addToCart);
-router.get('/', verifyUser, getCart);
-router.delete('/remove', verifyUser, removeFromCart);
-router.delete('/clear', verifyUser, clearCart);
+// Add product to cart
+router.post("/add", verifyToken, addToCart);
+
+// Get user's cart
+router.get("/", verifyToken, getCart);
+
+// Update product quantity in cart
+router.put("/update", verifyToken, updateCartItem);
+
+// Remove product from cart
+router.delete("/remove", verifyToken, removeFromCart);
+
+// Clear entire cart
+router.delete("/clear", verifyToken, clearCart);
 
 export default router;
