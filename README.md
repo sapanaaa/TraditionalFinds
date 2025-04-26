@@ -1,1 +1,1 @@
-Backend for minor project
+Minor project of 6th sem
