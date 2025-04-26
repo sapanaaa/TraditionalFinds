@@ -5,8 +5,8 @@ import { verifyToken } from '../middlewares/authMiddleware.js'; // Only need ver
 const router = express.Router();
 
 // Public Routes
-router.post('/signup', registerUser);
-router.post('/login', loginUser);
+router.post('/signup', registerUser); //working
+router.post('/login', loginUser); //working
 
 // Protected Route (only logged-in users can logout)
 router.get('/logout', verifyToken, logoutUser);

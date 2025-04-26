@@ -4,7 +4,7 @@ import express from "express";
 const router = express.Router();
 
 
-router.get('/get', getAllUsers);
+router.get('/get', getAllUsers); //working
 
 
 export default router;
