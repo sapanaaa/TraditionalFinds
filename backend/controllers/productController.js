@@ -53,7 +53,9 @@ export const updateProduct = async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
     if (!product) return res.status(404).json({ message: "Product not found" });
-
+    //console.log("Product Seller ID:", product.seller.toString());
+    //console.log("Logged-in User ID:", req.user._id.toString());
+ 
     if (product.seller.toString() !== req.user._id.toString() ) {
       return res.status(403).json({ message: "You are not authorized to update this product" });
     }
