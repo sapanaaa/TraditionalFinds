@@ -17,7 +17,7 @@ router.get('/:id', getProductById);     //working
 
 // 🔒 Protected routes (login + role check required)
 router.post('/', verifyToken, authorize('seller'), createProduct);   //working    
-router.put('/:id', verifyToken, authorize('seller'), updateProduct);     // Seller can update their own product
-router.delete('/:id', verifyToken, authorize(['seller', 'admin']), deleteProduct); // Seller or Admin can delete
+router.put('/:id', verifyToken, authorize('seller'), updateProduct);     // working
+router.delete('/:id', verifyToken, authorize(['seller', 'admin']), deleteProduct); // working
 
 export default router;
