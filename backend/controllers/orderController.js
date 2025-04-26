@@ -1,5 +1,5 @@
 import Order from '../models/Order.js';
-import Product from '../models/Product.js'; // needed if you want to validate products
+import Product from '../models/Product.js'; // needed to validate products
 
 // 🔹 CREATE New Order
 export const createOrder = async (req, res) => {
@@ -10,7 +10,7 @@ export const createOrder = async (req, res) => {
       return res.status(400).json({ message: "No products in the order" });
     }
 
-    // Calculate totalAmount (basic calculation assuming Product has 'price')
+    // Calculate totalAmount
     let totalAmount = 0;
     for (const item of products) {
       const product = await Product.findById(item.product);
@@ -21,7 +21,7 @@ export const createOrder = async (req, res) => {
     }
 
     const newOrder = new Order({
-      user: req.user._id, // logged-in user
+      user: req.user, // ✅ fixed: use req.user directly
       products,
       shippingAddress,
       totalAmount
@@ -39,8 +39,8 @@ export const createOrder = async (req, res) => {
 export const getAllOrders = async (req, res) => {
   try {
     const orders = await Order.find()
-      .populate('user', 'name email') // show user name and email
-      .populate('products.product', 'title price'); // show product title and price
+      .populate('user', 'name email') // show user's name and email
+      .populate('products.product', 'title price'); // show product's title and price
     res.json(orders);
   } catch (error) {
     console.error(error);
