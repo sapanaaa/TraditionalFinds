@@ -7,7 +7,7 @@ import userRoutes from "./routes/userRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
-
+import orderRoutes from "./routes/orderRoutes.js"; // Import order routes if needed
 dotenv.config();
 
 const app = express();
@@ -34,6 +34,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/blogs", blogRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
+app.use("/api/orders", orderRoutes); // Add this line to include order routes
 
 // Start server
 const PORT = process.env.PORT || 8080;
