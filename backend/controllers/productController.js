@@ -36,12 +36,17 @@ export const getAllProducts = async (req, res) => {
 export const getProductById = async (req, res) => {
   try {
     const product = await Product.findById(req.params.id).populate('seller', 'name email');
-    if (!product) return res.status(404).json({ message: "Product not found" });
+    if (!product)
+         return res.status(404).json({ message: "Product not found" });
     res.json(product);
-  } catch (error) {
+  }
+  catch (error) {
+   
+    
     res.status(500).json({ message: "Error fetching product" });
   }
 };
+
 
 // 🔸 UPDATE product (Only seller who created it)
 export const updateProduct = async (req, res) => {
