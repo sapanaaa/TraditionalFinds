@@ -1,1 +1,1 @@
-Here is the backend of a basic blog writing website using the concept of mern stack development
+Here is the backend of my minor project(e-commerce website) using the concept of mern stack development
