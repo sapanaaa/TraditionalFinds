@@ -1,14 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className="flex justify-between items-center p-4 bg-gray-800 text-white">
             <div className="text-xl font-bold">E-Commerce</div>
             <ul className="flex space-x-6">
-                <li className="cursor-pointer">Home</li>
-                <li className="cursor-pointer">Shop</li>
-                <li className="cursor-pointer">About</li>
-                <li className="cursor-pointer">Contact</li>
+                <li>
+                    <Link to="/home" className="cursor-pointer">Home</Link>
+                </li>
+                <li>
+                    <Link to="/shop" className="cursor-pointer">Shop</Link>
+                </li>
+                <li>
+                    <Link to="/about" className="cursor-pointer">About</Link>
+                </li>
+                <li>
+                    <Link to="/contact" className="cursor-pointer">Contact</Link>
+                </li>
             </ul>
             <div className="flex items-center">
                 <input

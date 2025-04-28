@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-const About = () => <h1>About Page</h1>;
+import About from "./pages/About";
+
 const Contact = () => <h1>Contact Page</h1>;
 
 const Footer = () => (

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import SplitText from '../components/SplitText'; // adjust the path according to your folder structure
 
 
-
 const Home = () => {
   const [products, setProducts] = useState([
     {
