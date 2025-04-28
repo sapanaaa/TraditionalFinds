@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import SplitText from '../components/SplitText'; // adjust the path according to your folder structure
+
 
 
 const Home = () => {
@@ -47,17 +49,34 @@ const Home = () => {
     <div className="bg-red-100/100">
       {/* Hero Section */}
       <section
-        className="bg-cover bg-center h-[500px] flex items-center justify-center text-white"
-        style={{ backgroundImage: "url('/path-to-your-hero-image.jpg')" }}
-      >
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Traditional Finds</h1>
-          <p className="text-lg md:text-xl mb-6">Discover the finest traditional crafts and handmade treasures.</p>
-          <a href="/shop" className="bg-red-700 text-white px-6 py-3 rounded-lg text-lg hover:bg-red-600 transition">
-            Shop Now
-          </a>
-        </div>
-      </section>
+  className="bg-cover bg-center h-[500px] flex items-center justify-center text-white"
+  style={{ backgroundImage: "url('/path-to-your-hero-image.jpg')" }}
+>
+  <div className="text-center">
+    <SplitText
+      text="Welcome to Traditional Finds"
+      className="text-4xl md:text-6xl font-bold mb-4"
+      delay={50}
+      animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+      animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+      easing="easeOutCubic"
+      textAlign="center"
+    />
+    <SplitText
+      text="Discover the finest traditional crafts and handmade treasures."
+      className="text-lg md:text-xl mb-6"
+      delay={30}
+      animationFrom={{ opacity: 0, transform: 'translate3d(0,40px,0)' }}
+      animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+      easing="easeOutCubic"
+      textAlign="center"
+    />
+    <a href="/shop" className="bg-red-700 text-white px-6 py-3 rounded-lg text-lg hover:bg-red-600 transition">
+      Shop Now
+    </a>
+  </div>
+</section>
+
 
       {/* Featured Products Section */}
       <section className="container mx-auto py-12 px-4">
