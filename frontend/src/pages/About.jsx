@@ -1,4 +1,6 @@
 import React from 'react';
+import SpotlightCard from '../components/SpotlightCard'; // Adjust the path if needed
+
 
 const About = () => {
   return (
@@ -12,30 +14,22 @@ const About = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 text-left">
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-2xl font-semibold text-pink-600 mb-4">Our Mission</h2>
-            <p className="text-gray-600">
-              Our mission is to connect artisans with people who appreciate authenticity and tradition. 
-              We aim to provide a platform where cultural artistry is not just sold, but truly valued.
-            </p>
-          </div>
+  <SpotlightCard className="bg-white p-6">
+    <h2 className="text-2xl font-semibold text-pink-600 mb-4">Our Mission</h2>
+    <p className="text-gray-600">
+      Our mission is to connect artisans with people who appreciate authenticity and tradition. 
+      We aim to provide a platform where cultural artistry is not just sold, but truly valued.
+    </p>
+  </SpotlightCard>
 
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-2xl font-semibold text-pink-600 mb-4">What We Offer</h2>
-            <p className="text-gray-600">
-              From handwoven fabrics and intricate wood carvings to traditional jewelry and home decor, 
-              we bring you pieces that reflect rich histories and vibrant communities.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-12">
-          <h2 className="text-2xl font-semibold text-pink-600 mb-4">Join Us</h2>
-          <p className="text-gray-600">
-            Become part of our journey to keep traditions alive. Explore our collections, support local artisans, 
-            and celebrate the timeless art of handmade creations.
-          </p>
-        </div>
+  <SpotlightCard className="bg-white p-6">
+    <h2 className="text-2xl font-semibold text-pink-600 mb-4">What We Offer</h2>
+    <p className="text-gray-600">
+      From handwoven fabrics and intricate wood carvings to traditional jewelry and home decor, 
+      we bring you pieces that reflect rich histories and vibrant communities.
+    </p>
+  </SpotlightCard>
+</div>
       </section>
     </div>
   );

@@ -7,7 +7,7 @@ const Navbar = () => {
             <div className="text-xl font-bold">E-Commerce</div>
             <ul className="flex space-x-6">
                 <li>
-                    <Link to="/home" className="cursor-pointer">Home</Link>
+                    <Link to="/" className="cursor-pointer">Home</Link>
                 </li>
                 <li>
                     <Link to="/shop" className="cursor-pointer">Shop</Link>
