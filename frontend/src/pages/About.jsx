@@ -15,7 +15,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-8 text-left">
   <SpotlightCard className="bg-white p-6">
-    <h2 className="text-2xl font-semibold text-pink-600 mb-4">Our Mission</h2>
+    <h2 className="text-2xl font-semibold text-red-500 mb-4">Our Mission</h2>
     <p className="text-gray-600">
       Our mission is to connect artisans with people who appreciate authenticity and tradition. 
       We aim to provide a platform where cultural artistry is not just sold, but truly valued.
@@ -23,7 +23,7 @@ const About = () => {
   </SpotlightCard>
 
   <SpotlightCard className="bg-white p-6">
-    <h2 className="text-2xl font-semibold text-pink-600 mb-4">What We Offer</h2>
+    <h2 className="text-2xl font-semibold text-red-500 mb-4">What We Offer</h2>
     <p className="text-gray-600">
       From handwoven fabrics and intricate wood carvings to traditional jewelry and home decor, 
       we bring you pieces that reflect rich histories and vibrant communities.
