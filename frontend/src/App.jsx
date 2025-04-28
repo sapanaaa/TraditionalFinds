@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Order from "./pages/Order";
+import Contact from "./pages/Contact";
 
-const Contact = () => <h1>Contact Page</h1>;
 
 const Footer = () => (
   <footer>
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
       <Footer />
     </Router>
   );
